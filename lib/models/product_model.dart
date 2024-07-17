@@ -7,7 +7,7 @@ class ProductModel {
     String description;
     String category;
     String image;
-    Rating? rating;
+    Rating rating;
 
     ProductModel({
         this.id,
@@ -16,7 +16,7 @@ class ProductModel {
         required this.description,
         required this.category,
         required this.image,
-        this.rating,
+        required this.rating,
     });
 
     ProductModel copyWith({
@@ -63,7 +63,7 @@ class ProductModel {
         "description": description,
         "category": category,
         "image": image,
-        "rating": rating?.toJson(),
+        "rating": rating.toJson(),
     };
 }
 
