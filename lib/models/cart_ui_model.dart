@@ -1,19 +1,19 @@
 class CartUIModel {
-    List<ProductCartModel> products;
+    List<ProductCartUIModel> products;
 
     CartUIModel({
         required this.products,
     });
 }
 
-class ProductCartModel {
+class ProductCartUIModel {
   int productId;
   String title;
   double price;
   String image;
   int quantity;
 
-  ProductCartModel({
+  ProductCartUIModel({
     required this.productId,
     required this.title,
     required this.price,
