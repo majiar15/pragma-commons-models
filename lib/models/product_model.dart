@@ -49,7 +49,7 @@ class ProductModel {
         description: json["description"],
         category: json["category"],
         image: json["image"],
-        rating: Rating.fromJson(json["rating"] ?? {}),
+        rating: Rating.fromJson(json["rating"]),
     );
 
     static List<ProductModel> fromJsonList(List<dynamic> jsonList) {
@@ -90,7 +90,7 @@ class Rating {
     String toRawJson() => json.encode(toJson());
 
     factory Rating.fromJson(Map<String, dynamic> json) => Rating(
-        rate: json["rate"]?.toDouble(),
+        rate: json["rate"].toDouble(),
         count: json["count"],
     );
 
