@@ -68,8 +68,8 @@ class ProductModel {
 }
 
 class Rating {
-    double? rate;
-    int? count;
+    double rate;
+    int count;
 
     Rating({
         required this.rate,
@@ -77,12 +77,12 @@ class Rating {
     });
 
     Rating copyWith({
-        double? rate,
-        int? count,
+        required double rate,
+        required int count,
     }) => 
         Rating(
-            rate: rate ?? this.rate,
-            count: count ?? this.count,
+            rate: rate,
+            count: count,
         );
 
     factory Rating.fromRawJson(String str) => Rating.fromJson(json.decode(str));
