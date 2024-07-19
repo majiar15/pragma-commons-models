@@ -4,7 +4,6 @@ import 'package:flutter_models_commons/flutter_models_commons.dart';
 
 class DiscountedProduct extends ProductModel {
   final int discountPercentage;
-
   DiscountedProduct({
     int? id,
     required String title,
@@ -13,7 +12,7 @@ class DiscountedProduct extends ProductModel {
     required String category,
     required String image,
     required Rating rating,
-    required this.discountPercentage,
+    this.discountPercentage = 0,
   }) : super(
           id: id,
           title: title,
